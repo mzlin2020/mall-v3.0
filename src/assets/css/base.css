@@ -1,0 +1,37 @@
+/* 定义项目中的css变量 */
+:root {
+    /* 文本 */
+    --color-text: #666;
+    /* 高亮颜色 */
+    --color-high-text: #ff5777;
+    /* 整体背景颜色 */
+    --color-tint: #ff8198;
+    --color-background: #fff;
+    --font-size: 14px;
+    --line-height: 1.5;
+  }
+
+  /* 取消页面默认样式 */
+  /* ::before和::after下特有的content，用于在css渲染中向元素逻辑上的头部或尾部添加内容。 */
+/* 这些添加不会出现在DOM中，不会改变文档内容，不可复制，仅仅是在css渲染层加入。 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*规定两个并排的带边框的框*/
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    user-select: none; /* 禁止用户鼠标在页面上选中文字/图片等 */
+    -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap是点击，highlight是背景高亮，color颜色，颜色用数值调节 */
+    background: var(--color-background);
+    width: 100vw; 
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+  }

@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <keep-alive exclude="Detail,Purchase">
+      <router-view />
+    </keep-alive>
+    <main-tab-bar v-show="!isHiddenTabBar" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MainTabBar from "./components/common/tabBar/MainTabBar.vue";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    MainTabBar,
+  },
+  name: "App",
+  computed: {
+    isHiddenTabBar() {
+      return this.$store.state.hiddenTabBar;
+    },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+/* 导入基本样式 */
+@import url("./assets/css/base.css");
 </style>

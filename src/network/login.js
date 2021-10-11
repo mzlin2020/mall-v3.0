@@ -1,9 +1,10 @@
 import axios from 'axios'
+import { baseURL } from './config'
 
 export function login(config) {
   return new Promise((resolve, reject) => {
     const instance = axios.create({
-      baseURL:'api/login',
+      baseURL,
       timeout: 5000,
     })
 

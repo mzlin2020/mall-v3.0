@@ -36,7 +36,7 @@ const routes = [
 
 const router = new VueRouter({
     routes,
-    mode: 'history'
+    mode: 'hash'
 })
 
 export default router //将路由实例导出

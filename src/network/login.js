@@ -4,7 +4,7 @@ import { baseURL } from './config'
 export function login(config) {
   return new Promise((resolve, reject) => {
     const instance = axios.create({
-      baseURL,
+      baseURL: baseURL,
       timeout: 5000,
     })
 

@@ -3,7 +3,7 @@ import { baseURL } from './config'
 
 export function register(name, password) {
   axios({
-    url: baseURL + "/users",
+    url: baseURL + "users",
     method:'POST',
     data:{
       name,

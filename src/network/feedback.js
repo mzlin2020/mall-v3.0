@@ -7,7 +7,7 @@ export function sendFeedback (content) {
   return new Promise((resolve, reject) => {
     // 创建实例
     const instance = axios.create({
-      baseURL: "http://47.106.182.193:8000/moment",
+      baseURL: "api/moment",
       timeout: 5000,
     })
 

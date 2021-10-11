@@ -1,8 +1,9 @@
 import axios from 'axios'
+import { baseURL } from './config'
 
 export function register(name, password) {
   axios({
-    url: "api/users",
+    url: baseURL + "/users",
     method:'POST',
     data:{
       name,

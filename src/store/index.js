@@ -98,7 +98,7 @@ const store = new Vuex.Store({
     actions: {
         async loginAction({commit}, payload) {
             // 发送网路请求
-            const loginResult = await login({data: payload,method: 'POST'})
+            const loginResult = await login({data: payload,method: 'POST',url:'login'})
             // console.log(loginResult);
             const { id, name, token } = loginResult.data
             // 本地缓存token
